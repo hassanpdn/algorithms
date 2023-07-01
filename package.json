@@ -5,8 +5,12 @@
   "repository": "https://github.com/hassanpdn/algorithms.git",
   "author": "<hassanpudineh.dev@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "postinstall": "husky install"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6"
+    "@commitlint/config-conventional": "^17.6.6",
+    "husky": "^8.0.3"
   }
 }
