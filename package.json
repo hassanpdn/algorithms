@@ -6,6 +6,7 @@
   "author": "<hassanpudineh.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "yarn run dev",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
