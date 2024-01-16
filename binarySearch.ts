@@ -7,6 +7,7 @@ let end = arr.length - 1;
 let target = 8;
 
 function binarySearch(arr : number[], start : number, end : number, target : number) {
+  if(start > end) return false
   let midIndex: number = Math.floor((start + end) / 2);
   if (arr[midIndex] === target) return true;
 
