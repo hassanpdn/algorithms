@@ -1,19 +1,27 @@
-let arr: number[] = [1, 2, 3, 4, 5, 6, 7, 8];
+let arr: number[] = [1, 3, 10, 722, 3600, 9000];
 
-let start = 0;
+let start: number = 0;
 
-let end = arr.length - 1;
+let end: number = arr.length - 1;
 
-let target = 8;
+let target: number = 712;
 
-function binarySearch(arr : number[], start : number, end : number, target : number) {
-  if(start > end) return false
-  let midIndex: number = Math.floor((start + end) / 2);
-  if (arr[midIndex] === target) return true;
+function binarySearch(
+  start: number,
+  end: number,
+  arr: number[],
+  target: number
+) {
+  while (start <= end) {
+    let midIndex = Math.floor((start + end) / 2);
 
-  if (arr[midIndex] > target)
-    return binarySearch(arr, start, midIndex - 1, target);
-  else return binarySearch(arr, midIndex + 1, end, target);
+    console.log(arr[midIndex]);
+    if (arr[midIndex] === target) return midIndex;
+
+    if (arr[midIndex] > target) end = midIndex - 1
+    else start = midIndex + 1
+  }
+  return `There is no item equal to ${target}`
 }
 
-console.log(binarySearch(arr, start, end, target))
+console.log(binarySearch(start, end, arr, target));
